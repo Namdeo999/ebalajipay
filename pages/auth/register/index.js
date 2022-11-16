@@ -9,7 +9,7 @@ import { LayoutContext } from '../../../layout/context/layoutcontext';
 import { InputText } from 'primereact/inputtext';
 import { classNames } from 'primereact/utils';
 
-const LoginPage = () => {
+const RegisterPage = () => {
     const [password, setPassword] = useState('');
     const [checked, setChecked] = useState(false);
     const { layoutConfig } = useContext(LayoutContext);
@@ -26,10 +26,11 @@ const LoginPage = () => {
                         <div className="text-center mb-5">
                             <img src={`${contextPath}/demo/images/login/avatar.png`} alt="Image" height="50" className="mb-3" />
                             <div className="text-900 text-3xl font-medium mb-3">Welcome, EBalaJi</div>
-                            <span className="text-600 font-medium">Sign in to continue</span>
+                            <span className="text-600 font-medium">Sign up to continue</span>
                         </div>
 
                         <div className="mb-5">
+                            <div></div>
                             <label htmlFor="email1" className="block text-900 text-xl font-medium mb-2">
                                 Email
                             </label>
@@ -49,11 +50,11 @@ const LoginPage = () => {
                                     Forgot password?
                                 </a>
                             </div>
-                            <Button label="Sign In" className="w-full p-3 text-xl" onClick={() => router.push('/')}></Button>
+                            <Button label="Sign Up" className="w-full p-3 text-xl" onClick={() => router.push('/')}></Button>
                         </div>
                         <div className="flex">
-                            <span className="text-600 font-medium">Don't have an account ?</span>
-                            <a className="font-medium no-underline ml-2 text-right cursor-pointer" style={{ color: 'var(--primary-color)' }} onClick={() => router.push('/auth/register')}>
+                            <span className="text-600 font-medium">Already have an account ?</span>
+                            <a className="font-medium no-underline ml-2 text-right cursor-pointer" style={{ color: 'var(--primary-color)' }} onClick={() => router.push('/auth/login')}>
                                 Register Now
                             </a>
                         </div>
@@ -64,7 +65,7 @@ const LoginPage = () => {
     );
 };
 
-LoginPage.getLayout = function getLayout(page) {
+RegisterPage.getLayout = function getLayout(page) {
     return (
         <React.Fragment>
             {page}
@@ -72,4 +73,4 @@ LoginPage.getLayout = function getLayout(page) {
         </React.Fragment>
     );
 };
-export default LoginPage;
+export default RegisterPage;
