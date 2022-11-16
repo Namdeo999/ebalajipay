@@ -9,8 +9,9 @@ const AppFooter = () => {
     return (
         <div className="layout-footer">
             <img src={`${contextPath}/layout/images/logo-${layoutConfig.colorScheme === 'light' ? 'dark' : 'white'}.svg`} alt="Logo" height="20" className="mr-2" />
-            by
-            <span className="font-medium ml-2">PrimeReact</span>
+            <strong> Copyright &copy; 2021-2022 by 
+            <a href="https://ebalajipay.com"> Ebajaji Services </a> All rights reserved. </strong>
+            {/* <span className="font-medium ml-2">PrimeReact</span> */}
         </div>
     );
 };
