@@ -63,7 +63,7 @@ const LandingPage = () => {
                         </ul>
                         <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
                             <Button label="Login" className="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500" onClick={() => router.push('/auth/login')}></Button>
-                            <Button label="Register" className="p-button-rounded border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></Button>
+                            <Button label="Register" className="p-button-rounded border-none ml-5 font-light line-height-2 bg-blue-500 text-white" onClick={() => router.push('/auth/register')}></Button>
                         </div>
                     </div>
                 </div>
