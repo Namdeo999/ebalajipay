@@ -1,5 +1,6 @@
 import getConfig from 'next/config';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import React, { useContext, useState } from 'react';
 import AppConfig from '../../layout/AppConfig';
 import { Checkbox } from 'primereact/checkbox';
@@ -44,6 +45,7 @@ const RegisterPage = () => {
 
     const fetchServices = async () => {
         const res = await getServices();
+        console.log(res)
         const newData = res.data.map((ele) => {
             return { name: ele.role, code: ele._id, fees: ele.fees_amount };
         });
@@ -113,14 +115,19 @@ const RegisterPage = () => {
     };
 
     return (
+        <React.Fragment>
+        <Head>
+            <link rel="icon" href={`${contextPath}/ebalaji-logo-favicon.jpg`} type="image/x-icon"></link>
+        </Head>
         <div className={containerClassName}>
             <div className="flex flex-column align-items-center justify-content-center">
                 {/* <img src={`${contextPath}/layout/images/logo-${layoutConfig.colorScheme === 'light' ? 'dark' : 'white'}.svg`} alt="Ebalaji logo" className="mb-4 w-6rem flex-shrink-0" /> */}
                 <div style={{ padding: '0.3rem', background: 'linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)' }}>
                     <div className="w-full surface-card py-5 px-5 sm:px-5">
                         <div className="text-center mb-5">
-                            <img src={`${contextPath}/demo/images/login/avatar.png`} alt="Image" height="50" className="mb-3" />
-                            <div className="text-900 text-3xl font-medium mb-3">Welcome, Ebalaji Services</div>
+                        <img src={`${contextPath}/assets/logos/ebalaji-logo-84-62.jpg`} alt="Image" height="50" className="mb-3" />                            <div className="text-900 text-3xl font-medium mb-3">Welcome, Ebalaji Services </div> 
+                            {/* {process.env.NEXT_PUBLIC_API_URL} */}
+                            {/* https://github.com/Namdeo999/ebajajiadmin.git */}
                             {/* <span className="text-600 font-medium">Sign up to continue</span> */}
                         </div>
 
@@ -343,12 +350,15 @@ const RegisterPage = () => {
                 </div>
             </div>
         </div>
+
+        </React.Fragment>
     );
 };
 
 RegisterPage.getLayout = function getLayout(page) {
     return (
         <React.Fragment>
+
             {page}
             <AppConfig simple />
         </React.Fragment>

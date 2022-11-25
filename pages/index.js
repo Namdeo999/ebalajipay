@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import getConfig from 'next/config';
 import { useRouter } from 'next/router';
 import { StyleClass } from 'primereact/styleclass';
@@ -16,19 +17,26 @@ const LandingPage = () => {
      const router = useRouter();
 
     return (
+        <React.Fragment>
+        <Head>
+            <link rel="icon" href={`${contextPath}/ebalaji-logo-favicon.jpg`} type="image/x-icon"></link>
+        </Head>
+        
         <div className="surface-0 flex justify-content-center">
             <div id="home" className="landing-wrapper overflow-hidden">
                 <div className="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
                     <Link href="/">
                         <a className="flex align-items-center">
-                            <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2" />
-                            <span className="text-900 font-medium text-2xl line-height-3 mr-8">EBalaJi</span>
+                            {/* <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2" /> */}
+                            <img src={`${contextPath}/assets/logos/ebalaji-logo-84-62.jpg`} alt="Image" height="50" className="mb-3" />
+                            <img src={`${contextPath}/assets/logos/ebalaji.jpg`} alt="Image" width="141" height="30" className="mb-3 mt-3" />
+                            {/* <span className="text-900 font-medium text-2xl line-height-3 mr-8">EBalaji</span> */}
                         </a>
                     </Link>
                     <StyleClass nodeRef={menuRef} selector="@next" enterClassName="hidden" leaveToClassName="hidden" hideOnOutsideClick="true">
                         <i ref={menuRef} className="pi pi-bars text-4xl cursor-pointer block lg:hidden text-700"></i>
                     </StyleClass>
-                    <div className="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style={{ top: '100%' }}>
+                    <div className="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-8 px-6 lg:px-0 z-2" style={{ top: '100%' }}>
                         <ul className="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                             <li>
                                 <a href="#home" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
@@ -37,20 +45,14 @@ const LandingPage = () => {
                                 <Ripple />
                             </li>
                             <li>
-                                <a href="#services" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Services</span>
-                                </a>
-                                <Ripple />
-                            </li>
-                            <li>
-                                <a href="#highlights" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Highlights</span>
-                                </a>
-                                <Ripple />
-                            </li>
-                            <li>
                                 <a href="#aboutus" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                                     <span>About Us</span>
+                                </a>
+                                <Ripple />
+                            </li>
+                            <li>
+                                <a href="#services" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                                    <span>Services</span>
                                 </a>
                                 <Ripple />
                             </li>
@@ -70,26 +72,109 @@ const LandingPage = () => {
 
                 <div
                     id="hero"
-                    className="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden"
+                    className="flex flex-column pb-8 pt-4 px-4 lg:px-8 overflow-hidden"
                     style={{ background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EEEFAF 0%, #C3E3FA 100%)', clipPath: 'ellipse(150% 87% at 93% 13%)' }}
                 >
                     <div className="mx-4 md:mx-8 mt-0 md:mt-4">
+                        <br/>
                         <h1 className="text-6xl font-bold text-gray-900 line-height-2">
-                            <span className="font-light block">Welcome to...</span>EBalaJi Online Pay Services
+                            <span className="font-light block mb-3">Welcome to...</span>
+                            EBalaji Online Pay Services
                         </h1>
-                        <p className="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Pay bills, recharge, send money, Purchase Gift Voucher, Book Flight, Book Hotel & Use Our Seamless etc. Cause if you do, it can be yours now.</p>
-                        <Button type="button" label="Get Started" className="p-button-rounded text-xl border-none mt-3 bg-blue-500 font-normal line-height-3 px-3 text-white"></Button>
+                        <br/>
+                        <b>
+                            <p className="font-normal line-height-3 md:mt-3 ">Best B2B Portal Provider Company in India, We at Ebalaji Services provide AEPS, BBPS, DMT, Recharge, Bill Payments, NSDL / UTI Pan Card, Income Tax Return, GST Registration, GST Filling, Shop Act (MH Only), Digital Signature, Food Licence, MSME Certificate…and Much More.</p>
+                        </b>
+                        {/* <Button type="button" label="Get Started" className="p-button-rounded text-xl border-none mt-3 bg-blue-500 font-normal line-height-3 px-3 text-white"></Button> */}
                     </div>
                     <div className="flex justify-content-center md:justify-content-end">
-                        <img src={`${contextPath}/demo/images/landing/screen-1.png`} alt="Hero Image" className="w-9 md:w-auto" />
+                        <img src={`${contextPath}/assets/images/bharat-bill-payment-system.png`} alt="Hero Image" className="w-9 md:w-auto" />
                     </div>
                 </div>
 
-                <div id="services" className="py-4 px-4 lg:px-8 mt-5 mx-0 lg:mx-8">
+
+                <div className="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
+                    <div className="mb-8 font-bold text-2xl">
+                        {/* <span className="text-900">Our Best Features, </span> */}
+                        <h2 className="text-900 font-normal mb-2">Our Best Features</h2>
+                        {/* <span className="text-blue-600">Many Solutions</span> */}
+                    </div>
+                    {/* <div className="text-700 text-sm mb-6">OUR FEATURES</div> */}
+                    <div className="grid">
+
+                        <div className="col-12 md:col-4 mb-4 px-5">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-check-circle text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">Easy to Use</div>
+                            <span className="text-700 text-sm line-height-3">Ornare suspendisse sed nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</span>
+                        </div>
+
+                        <div className="col-12 md:col-4 mb-4 px-5">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-globe text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">Fast & Global Support</div>
+                            <span className="text-700 text-sm line-height-3">Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.</span>
+                        </div>
+
+                        <div className="col-12 md:col-4 mb-4 px-5">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-users text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">100% Client Satisfied</div>
+                            <span className="text-700 text-sm line-height-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+                        </div>
+
+                        <div className="col-12 md:col-4 mb-4 px-5">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-lock text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">End-to-End Encryption</div>
+                            <span className="text-700 text-sm line-height-3">Risus nec feugiat in fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</span>
+                        </div>
+                    
+                        
+                        <div className="col-12 md:col-4 mb-4 px-5">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-money-bill text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">High Margin</div>
+                            <span className="text-700 text-sm line-height-3">Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. </span>
+                        </div>
+                        <div className="col-12 md:col-4 md:mb-4 mb-0 px-3">
+                            <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
+                                <i className="pi pi-shield text-4xl text-blue-500"></i>
+                            </span>
+                            <div className="text-900 mb-3 font-medium">Trusted Securitty</div>
+                            <span className="text-700 text-sm line-height-3">Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="aboutus" className=' mt-0 mx-0 '>
+                    {/* <div className="col-12 mt-4 mb-4 p-2 md:p-8" style={{ borderRadius: '20px', background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}> */}
+                    <div className="col-12 mt-4 mb-4 p-2 md:p-8" style={{  background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}>
+                        <div className="flex flex-column justify-content-center align-items-center text-center mb-4 px-4 py-4 md:py-0">
+                            {/* <h3 className="text-gray-900 mb-2">About EbalaJi</h3> */}
+                            <div className="text-900 font-bold text-6xl mb-4 mt-4 text-center">About EbalaJi</div>
+                            {/* <span className="text-gray-600 text-2xl">Peak Interactive</span> */}
+                            <p className="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4" style={{ maxWidth: '1000px' }}>
+                                “In this digital age, where everything in business has gone digital, we at Ebalaji Pay provide an easy, efficient, and long term solution to all your multi utility payment, and other document needs. We abide by the digital India norms in the best possible way. Our main aim is to channelize the payments to the unified digital platforms where you get all the security and convenience. Our services range widely.”
+                            </p>
+                            {/* <img src={`${contextPath}/demo/images/landing/peak-logo.svg`} className="mt-4" alt="Company logo" /> */}
+                            </div>
+                        </div>
+                </div>
+    
+
+                <div id="services" className="py-4 px-4 lg:px-8 mt- mx-0 lg:mx-8 mb-6">
                     <div className="grid justify-content-center">
-                        <div className="col-12 text-center mt-8 mb-4">
-                            <h2 className="text-900 font-normal mb-2">We Provide Truly Business Solutions</h2>
-                            <span className="text-600 text-2xl">Our Services</span>
+                        <div className="col-12 text-center mt-7 mb-4">
+                        <div className="text-900 font-bold text-6xl mb-4 text-center">We Provide Truly Business Solutions</div>
+                    <div className="text-700 text-xl mb-6 text-center line-height-3">Our Best Services</div>
+                            {/* <h2 className="text-900 font-normal mb-2">We Provide Truly Business Solutions</h2>
+                            <span className="text-600 text-2xl">Our Best Services</span> */}
                         </div>
 
                         <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
@@ -102,11 +187,11 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    <div className="flex align-items-center justify-content-center bg-yellow-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-yellow-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
                                         <i className="pi pi-fw pi-users text-2xl text-yellow-700"></i>
-                                    </div>
-                                    <h5 className="mb-2 text-900">Easy to Use</h5>
-                                    <span className="text-600">Posuere morbi leo urna molestie.</span>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">AEPS / BBPS / UPI</h5>
+                                    <span className="text-600">We are started to providing aadhaar enabled payment system services and providing bharat bill payment or Unique UPI QR Code Accept Payment from your Customer.</span>
                                 </div>
                             </div>
                         </div>
@@ -121,49 +206,11 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    <div className="flex align-items-center justify-content-center bg-cyan-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-cyan-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
                                         <i className="pi pi-fw pi-palette text-2xl text-cyan-700"></i>
-                                    </div>
-                                    <h5 className="mb-2 text-900">Bill Payments & Recharge</h5>
-                                    <span className="text-600">Semper risus in hendrerit.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-12 md:col-12 lg:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                            <div
-                                style={{
-                                    height: '160px',
-                                    padding: '2px',
-                                    borderRadius: '10px',
-                                    background: 'linear-gradient(90deg, rgba(145, 226, 237, 0.2), rgba(172, 180, 223, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(246, 158, 188, 0.2))'
-                                }}
-                            >
-                                <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    <div className="flex align-items-center justify-content-center bg-indigo-200" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-map text-2xl text-indigo-700"></i>
-                                    </div>
-                                    <h5 className="mb-2 text-900">Banking Services</h5>
-                                    <span className="text-600">Non arcu risus quis varius quam quisque.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
-                            <div
-                                style={{
-                                    height: '160px',
-                                    padding: '2px',
-                                    borderRadius: '10px',
-                                    background: 'linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(145, 210, 204, 0.2))'
-                                }}
-                            >
-                                <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    <div className="flex align-items-center justify-content-center bg-bluegray-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-id-card text-2xl text-bluegray-700"></i>
-                                    </div>
-                                    <h5 className="mb-2 text-900">Payment Services</h5>
-                                    <span className="text-600">Nulla malesuada pellentesque elit.</span>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">Bill & Recharge</h5>
+                                    <span className="text-600">At Ebalaji you can pay your electricity, landline, insurance, Loan EMI bills with convenience and on time. you can recharge your mobile online.</span>
                                 </div>
                             </div>
                         </div>
@@ -178,60 +225,271 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
                                         <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
-                                    </div>
-                                    <h5 className="mb-2 text-900">Travel & E-Governance Services</h5>
-                                    <span className="text-600">Condimentum lacinia quis vel eros.</span>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">Banking Services</h5>
+                                    <span className="text-600">Money transfer has become very important to many people around the world.</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div
-                            className="col-12 mt-8 mb-8 p-2 md:p-8"
-                            style={{ borderRadius: '20px', background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}
-                        >
-                            <div className="flex flex-column justify-content-center align-items-center text-center px-3 py-3 md:py-0">
-                                <h3 className="text-gray-900 mb-2">Joséphine Miller</h3>
-                                <span className="text-gray-600 text-2xl">Peak Interactive</span>
-                                <p className="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4" style={{ maxWidth: '800px' }}>
-                                    “Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                                    laborum.”
-                                </p>
-                                <img src={`${contextPath}/demo/images/landing/peak-logo.svg`} className="mt-4" alt="Company logo" />
+                        <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                            <div
+                                style={{
+                                    height: '160px',
+                                    padding: '2px',
+                                    borderRadius: '10px',
+                                    background: 'linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(145, 210, 204, 0.2))'
+                                }}
+                            >
+                                <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-bluegray-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                        <i className="pi pi-fw pi-id-card text-2xl text-bluegray-700"></i>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">MSME Certificate</h5>
+                                    <span className="text-600">At Ebalaji you can start MSME Certificate center at your shop/office with high margin.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                            <div
+                                style={{
+                                    height: '160px',
+                                    padding: '2px',
+                                    borderRadius: '10px',
+                                    background: 'linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(145, 226, 237, 0.2),rgba(160, 210, 250, 0.2))'
+                                }}
+                            >
+                                <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                        <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">Travel & E-Governance Services</h5>
+                                    <span className="text-600"> You can start Income Tax Filing and Project File Filing center at your shop/office with high margin.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                            <div
+                                style={{
+                                    height: '160px',
+                                    padding: '2px',
+                                    borderRadius: '10px',
+                                    background: 'linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(145, 226, 237, 0.2),rgba(160, 210, 250, 0.2))'
+                                }}
+                            >
+                                <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
+                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
+                                        <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
+                                    </div> */}
+                                    <h5 className="mb-3 text-900 text-center">Income Tax & GST Registration</h5>
+                                    <span className="text-600">You can start  Income Tax Filing, GST Registration and GST Filing Digital Signature center at your shop/office with high margin.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="pricing" className="surface-ground px-4 py-8 md:px-6 lg:px-8">
+                    <div className="text-900 font-bold text-6xl mb-4 text-center">Pricing Plans</div>
+                    <div className="text-700 text-xl mb-6 text-center line-height-3">Choose the plan according to your need.</div>
+
+                    <div className="grid">
+                        <div className="col-12 lg:col-3">
+                            <div className="p-3 h-full">
+                                <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
+                                    <div className="text-900 font-bold text-xl mb-2">Retailer</div>
+                                    {/* <div className="text-600">Plan description</div> */}
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <div className="flex align-items-center">
+                                        <span className="font-bold text-2xl text-900">100</span>
+                                        <span className="ml-2 font-medium text-600">/-</span>
+                                    </div>
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <ul className="list-none p-0 m-0 flex-grow-1">
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Single Wallet Multi Services</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Attractive Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Real Time Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>One time investment for a life time earning</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>All services training</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>24*7 Support Whatsapp & Call</span>
+                                        </li>
+                                    </ul>
+                                    <hr className="mb-3 mx-0 border-top-1 border-none surface-border mt-auto" />
+                                    <Button label="Choose Plan" className="p-2 w-full mt-auto"></Button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-12 lg:col-3">
+                            <div className="p-3 h-full">
+                                <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
+                                    <div className="text-900 font-bold text-xl mb-2">Super Distributor</div>
+                                    {/* <div className="text-600">Plan description</div> */}
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <div className="flex align-items-center">
+                                        <span className="font-bold text-2xl text-900">501</span>
+                                        <span className="ml-2 font-medium text-600">/-</span>
+                                    </div>
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <ul className="list-none p-0 m-0 flex-grow-1">
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Unlimited Retailer, Distributor creation</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> Every Retailer Gets Attractive Commission </span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Commissions received on every transaction Of your retailer</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>One time investment life time earning</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>All services training</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>24*7 Support Whatsapp & Call</span>
+                                        </li>
+                                        
+                                    </ul>
+                                    <hr className="mb-3 mx-0 border-top-1 border-none surface-border" />
+                                    <Button label="Choose Plan" className="p-2 w-full"></Button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-12 lg:col-3">
+                            <div className="p-3 h-full">
+                                <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
+                                    <div className="text-900 font-bold text-xl mb-2">White Level</div>
+                                    {/* <div className="text-600">Plan description</div> */}
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <div className="flex align-items-center">
+                                        <span className="font-bold text-2xl text-900">999</span>
+                                        <span className="ml-2 font-medium text-600">/-</span>
+                                    </div>
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <ul className="list-none p-0 m-0 flex-grow-1">
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Unlimited Retailer, Distributor Creation</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Every Distributor Gets Attractive Commission on Every Referral</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Commissions received on every transaction Of your Distributor & Retailer</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Attractive Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Real Time Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> One time investment for a life time earning</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> All services training</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> 24*7 Support Whatsapp & Call</span>
+                                        </li>
+                                    </ul>
+                                    <hr className="mb-3 mx-0 border-top-1 border-none surface-border" />
+                                    <Button label="Choose Plan" className="p-2 w-full"></Button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 lg:col-3">
+                            <div className="p-3 h-full">
+                                <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
+                                    <div className="text-900 font-bold text-xl mb-2">Admin</div>
+                                    {/* <div className="text-600">Plan description</div> */}
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <div className="flex align-items-center">
+                                        <span className="font-bold text-2xl text-900">9999</span>
+                                        <span className="ml-2 font-medium text-600">/-</span>
+                                    </div>
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <ul className="list-none p-0 m-0 flex-grow-1">
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Unlimited Distributor and White Level Creation</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Every Distributor Gets Attractive Commission on Every Referral</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Commissions received on every transaction Of your Distributor & Retailer</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Attractive Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Real Time Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> One time investment for a life time earning</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> All services training</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> 24*7 Support Whatsapp & Call</span>
+                                        </li>
+                                    </ul>
+                                    <hr className="mb-3 mx-0 border-top-1 border-none surface-border" />
+                                    <Button label="Choose Plan" className="p-2 w-full "></Button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+    
 
-                <div id="highlights" className="py-4 px-4 lg:px-8 mx-0 my-6 lg:mx-8">
-                    <div className="text-center">
-                        <h2 className="text-900 font-normal mb-2">Powerful Everywhere</h2>
-                        <span className="text-600 text-2xl">Amet consectetur adipiscing elit...</span>
-                    </div>
-
-                    <div className="grid mt-8 pb-2 md:pb-8">
-                        <div className="flex justify-content-center col-12 lg:col-6 bg-purple-100 p-0 flex-order-1 lg:flex-order-0" style={{ borderRadius: '8px' }}>
-                            <img src={`${contextPath}/demo/images/landing/mockup.svg`} className="w-11" alt="mockup mobile" />
-                        </div>
-
-                        <div className="col-12 lg:col-6 my-auto flex flex-column lg:align-items-end text-center lg:text-right">
-                            <div className="flex align-items-center justify-content-center bg-purple-200 align-self-center lg:align-self-end" style={{ width: '4.2rem', height: '4.2rem', borderRadius: '10px' }}>
-                                <i className="pi pi-fw pi-mobile text-5xl text-purple-700"></i>
-                            </div>
-                            <h2 className="line-height-1 text-900 text-4xl font-normal">Congue Quisque Egestas</h2>
-                            <span className="text-700 text-2xl line-height-3 ml-0 md:ml-2" style={{ maxWidth: '650px' }}>
-                                ONE PAYMENT GATWAY SYSTEM START KIYA GAYA HAI JISME AUTOMATIC COMMISSION MILENGA JYDA JANKARI KE LIYE CONTACT TO ADMIN Ebalajiservices India has been authorized to apply PAN CARD across India through our Super
-                                Distributor ,Distributor & retailer network. Retailer will able to make online application of New PAN Card and Correction / Duplicate. A great opportunity for Super Distributor& Distributor to authorized Retailers
-                                become agent for PAN Card Ebalajiservices is a technology based global platform founded by group of professionals to provide all services of Travel, Utility & Bill payments, Financial and E-Gov under one Tab.
-                                Ebalajiservices acts as the unified platform for all services related to the PAN card application and all other procedures, whatsoever. Permanent Account Number (PAN), the ten-digit number issued in the form of a
-                                laminated card by the Income Tax Department in India, counts as one of the most important document as the unique identification number allotted to each taxpayer of the country.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="pricing" className="py-4 px-4 lg:px-8 my-2 md:my-4">
+                {/* <div  className="py-4 px-4 lg:px-8 my-2 md:my-4">
                     <div className="text-center">
                         <h2 className="text-900 font-normal mb-2">Matchless Pricing</h2>
                         <span className="text-600 text-2xl">Amet consectetur adipiscing elit...</span>
@@ -331,66 +589,54 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="py-4 px-4 mx-0 mt-8 lg:mx-8">
                     <div className="grid justify-content-between">
                         <div className="col-12 md:col-2" style={{ marginTop: '-1.5rem' }}>
                             <Link href="/">
                                 <a className="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
-                                    <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="footer sections" width="50" height="50" className="mr-2" />
-                                    <span className="font-medium text-3xl text-900">EBalaJi</span>
+                                    {/* <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="footer sections" width="50" height="50" className="mr-2" /> */}
+                                    <img src={`${contextPath}/assets/logos/ebalaji-sewa-pvt-ltd.jpg`} alt="footer sections" width="200" height="100" className="mr-2" />
+                                    {/* <span className="font-medium text-3xl text-900">EBalaji</span> */}
                                 </a>
                             </Link>
                         </div>
 
                         <div className="col-12 md:col-10 lg:col-7">
                             <div className="grid text-center md:text-left">
-                                <div className="col-12 md:col-3">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Company</h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">About Us</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">News</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Investor Relations</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Careers</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Media Kit</a>
+
+                                <div className="col-12 md:col-6">
+                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Services</h4>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Bill Payments</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Banking Services</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Pan, Aadhar, GST</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Licence</a>
                                 </div>
 
-                                <div className="col-12 md:col-3 mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Resources</h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Get Started</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Learn</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Case Studies</a>
-                                </div>
-
-                                <div className="col-12 md:col-3 mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Community</h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Discord</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-                                        Events
-                                        <img src={`${contextPath}/demo/images/landing/new-badge.svg`} className="ml-2" />
-                                    </a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">FAQ</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Blog</a>
-                                </div>
-
-                                <div className="col-12 md:col-3 mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Legal</h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Brand Policy</a>
+                                <div className="col-12 md:col-6 mt-4 md:mt-0">
+                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Important Links</h4>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Privacy Policy</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Terms of Service</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Disclaimer</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Terms And Conditions</a>
                                 </div>
+
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        </React.Fragment>
     );
 };
 
 LandingPage.getLayout = function getLayout(page) {
     return (
         <React.Fragment>
+            
             {page}
             <AppConfig simple />
         </React.Fragment>

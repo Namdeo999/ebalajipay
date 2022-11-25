@@ -369,10 +369,10 @@ const Dashboard = () => {
                 >
                     <div>
                         <div className="text-blue-100 font-medium text-xl mt-2 mb-3">TAKE THE NEXT STEP</div>
-                        <div className="text-white font-medium text-5xl">Try PrimeBlocks</div>
+                        <div className="text-white font-medium text-5xl">Ebalaji Services</div>
                     </div>
                     <div className="mt-4 mr-auto md:mt-0 md:mr-0">
-                        <Link href="https://www.primefaces.org/primeblocks-react">
+                        <Link href="#">
                             <a className="p-button font-bold px-5 py-3 p-button-warning p-button-rounded p-button-raised">
                                 Get Started
                             </a>

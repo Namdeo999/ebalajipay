@@ -1,5 +1,6 @@
 import getConfig from 'next/config';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import React, { useContext, useState } from 'react';
 import AppConfig from '../../layout/AppConfig';
 import { Checkbox } from 'primereact/checkbox';
@@ -35,13 +36,21 @@ const LoginPage = () => {
     };
 
     return (
+
+        <React.Fragment>
+
+        <Head>
+            <link rel="icon" href={`${contextPath}/ebalaji-logo-favicon.jpg`} type="image/x-icon"></link>
+        </Head>
+
         <div className={containerClassName}>
             <div className="flex flex-column align-items-center justify-content-center">
                 {/* <img src={`${contextPath}/layout/images/logo-${layoutConfig.colorScheme === 'light' ? 'dark' : 'white'}.svg`} alt="Ebalaji logo" className="mb-5 w-6rem flex-shrink-0"/> */}
+                {/* <img src={`${contextPath}/assets/logos/ebalaji-logo-84-62.jpg`} alt="Ebalaji logo" className="mb-5 w-6rem flex-shrink-0"/> */}
                 <div style={{ padding: '0.3rem', background: 'linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)' }}>
                     <div className="w-full surface-card py-6 px-8 sm:px-8">
                         <div className="text-center mb-5">
-                            <img src={`${contextPath}/demo/images/login/avatar.png`} alt="Image" height="50" className="mb-3" />
+                            <img src={`${contextPath}/assets/logos/ebalaji-logo-84-62.jpg`} alt="Image" height="50" className="mb-3" />
                             <div className="text-900 text-3xl font-medium mb-3">Welcome, Ebalaji Services</div>
                             <span className="text-600 font-medium">Sign in to continue</span>
                         </div>
@@ -98,6 +107,7 @@ const LoginPage = () => {
                 </div>
             </div>
         </div>
+        </React.Fragment>
     );
 };
 
