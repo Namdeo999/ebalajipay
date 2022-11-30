@@ -298,7 +298,7 @@ const LandingPage = () => {
                     <div className="text-700 text-xl mb-6 text-center line-height-3">Choose the plan according to your need.</div>
 
                     <div className="grid">
-                        <div className="col-12 lg:col-3">
+                        <div className="col-12 lg:col-4">
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">Retailer</div>
@@ -341,10 +341,10 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        <div className="col-12 lg:col-3">
+                        <div className="col-12 lg:col-4">
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
-                                    <div className="text-900 font-bold text-xl mb-2">Super Distributor</div>
+                                    <div className="text-900 font-bold text-xl mb-2">Distributor</div>
                                     {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
@@ -355,7 +355,7 @@ const LandingPage = () => {
                                     <ul className="list-none p-0 m-0 flex-grow-1">
                                         <li className="flex align-items-center mb-3">
                                             <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                            <span>Unlimited Retailer, Distributor creation</span>
+                                            <span>Unlimited Retailer creation</span>
                                         </li>
                                         <li className="flex align-items-center mb-3">
                                             <i className="pi pi-check-circle text-green-500 mr-2"></i>
@@ -385,10 +385,10 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        <div className="col-12 lg:col-3">
+                        <div className="col-12 lg:col-4">
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
-                                    <div className="text-900 font-bold text-xl mb-2">White Level</div>
+                                    <div className="text-900 font-bold text-xl mb-2">Super Distributor</div>
                                     {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
@@ -435,21 +435,22 @@ const LandingPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 lg:col-3">
+
+                        <div className="col-12 lg:col-6">
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
-                                    <div className="text-900 font-bold text-xl mb-2">Admin</div>
+                                    <div className="text-900 font-bold text-xl mb-2">White Level</div>
                                     {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
-                                        <span className="font-bold text-2xl text-900">9999</span>
+                                        <span className="font-bold text-2xl text-900">999</span>
                                         <span className="ml-2 font-medium text-600">/-</span>
                                     </div>
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <ul className="list-none p-0 m-0 flex-grow-1">
                                         <li className="flex align-items-center mb-3">
                                             <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                            <span>Unlimited Distributor and White Level Creation</span>
+                                            <span>Unlimited Distributor and Super Distributor Creation</span>
                                         </li>
                                         <li className="flex align-items-center mb-3">
                                             <i className="pi pi-check-circle text-green-500 mr-2"></i>
@@ -485,6 +486,58 @@ const LandingPage = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="col-12 lg:col-6">
+                            <div className="p-3 h-full">
+                                <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
+                                    <div className="text-900 font-bold text-xl mb-2">Admin</div>
+                                    {/* <div className="text-600">Plan description</div> */}
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <div className="flex align-items-center">
+                                        <span className="font-bold text-2xl text-900">9999</span>
+                                        <span className="ml-2 font-medium text-600">/-</span>
+                                    </div>
+                                    <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
+                                    <ul className="list-none p-0 m-0 flex-grow-1">
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Unlimited Super Distributor, White Level Creation</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Every Distributor Gets Attractive Commission on Every Referral</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Commissions received on every transaction Of your Distributor & Retailer</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Attractive Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span>Real Time Commission</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> One time investment for a life time earning</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> All services training</span>
+                                        </li>
+                                        <li className="flex align-items-center mb-3">
+                                            <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                            <span> 24*7 Support Whatsapp & Call</span>
+                                        </li>
+                                    </ul>
+                                    <hr className="mb-3 mx-0 border-top-1 border-none surface-border" />
+                                    <Button label="Choose Plan" className="p-2 w-full "></Button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
     
@@ -626,6 +679,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
