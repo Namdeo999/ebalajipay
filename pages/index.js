@@ -9,12 +9,15 @@ import { Ripple } from 'primereact/ripple';
 import { Divider } from 'primereact/divider';
 import AppConfig from '../layout/AppConfig';
 import { LayoutContext } from '../layout/context/layoutcontext';
+import { Card } from 'primereact/card';
 
 const LandingPage = () => {
     const contextPath = getConfig().publicRuntimeConfig.contextPath;
     const { layoutConfig } = useContext(LayoutContext);
     const menuRef = useRef();
      const router = useRouter();
+
+     
 
     return (
         <React.Fragment>
@@ -79,16 +82,31 @@ const LandingPage = () => {
                         <br/>
                         <h1 className="text-6xl font-bold text-gray-900 line-height-2">
                             <span className="font-light block mb-3">Welcome to...</span>
-                            EBalaji Online Pay Services
+                            {/* EBalaji Online Pay Services */}
+                            EBalaji Pay Online Services
                         </h1>
                         <br/>
                         <b>
                             <p className="font-normal line-height-3 md:mt-3 ">Best B2B Portal Provider Company in India, We at Ebalaji Services provide AEPS, BBPS, DMT, Recharge, Bill Payments, NSDL / UTI Pan Card, Income Tax Return, GST Registration, GST Filling, Shop Act (MH Only), Digital Signature, Food Licence, MSME Certificate…and Much More.</p>
+                            {/* <p className="font-normal line-height-3 md:mt-3 "> PAN card service is most demanding service in the industry, so we have developed software for PAN card service, using PAN card software or application, admin can create PAN card agents in all over india, and enable UTI/NSDL PAN card service for all registered PAN card agents to your business PAN card panel. Vaishnavi Digipayments is one of the best PAN cards service and API solution provider in India, offering PAN card service extremely economical. And all PAN card application can be processed using eKYC..</p> */}
                         </b>
                         {/* <Button type="button" label="Get Started" className="p-button-rounded text-xl border-none mt-3 bg-blue-500 font-normal line-height-3 px-3 text-white"></Button> */}
                     </div>
                     <div className="flex justify-content-center md:justify-content-end">
-                        <img src={`${contextPath}/assets/images/bharat-bill-payment-system.png`} alt="Hero Image" className="w-9 md:w-auto" />
+                        <img src={`${contextPath}/assets/images/bharat-bill-payment-system.png`}  alt="Hero Image" className="w-9 md:w-auto" />
+                    </div>
+                </div>
+
+                <div className="grid grid-nogutter surface-0 text-800">
+                    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+                        <section>
+                            {/* <span className="block text-6xl font-bold mb-1">Create the screens your</span> */}
+                            <div className="text-6xl text-primary font-bold mb-3">EBalaji Pay Online PAN Card Services</div>
+                            <p className="mt-0 mb-4 text-700 line-height-3">PAN card service is most demanding service in the industry, so we have developed software for PAN card service, using PAN card software or application, admin can create PAN card agents in all over india, and enable UTI/NSDL PAN card service for all registered PAN card agents to your business PAN card panel. <br></br><br></br>Ebalaji pay is one of the best PAN cards service and API solution provider in India, offering PAN card service extremely economical. And all PAN card application can be processed using eKYC..</p>
+                        </section>
+                    </div>
+                    <div className="col-12 md:col-6 overflow-hidden">
+                        <img src={`${contextPath}/assets/images/Online-Pan-Card-Application.webp`} alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' }} />
                     </div>
                 </div>
 
@@ -96,18 +114,20 @@ const LandingPage = () => {
                 <div className="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
                     <div className="mb-8 font-bold text-2xl">
                         {/* <span className="text-900">Our Best Features, </span> */}
-                        <h2 className="text-900 font-normal mb-2">Our Best Features</h2>
+                        <h2 className="text-6xl text-primary font-bold mb-3">Our Best Features</h2>
                         {/* <span className="text-blue-600">Many Solutions</span> */}
                     </div>
                     {/* <div className="text-700 text-sm mb-6">OUR FEATURES</div> */}
                     <div className="grid">
+
+                    
 
                         <div className="col-12 md:col-4 mb-4 px-5">
                             <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
                                 <i className="pi pi-check-circle text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">Easy to Use</div>
-                            <span className="text-700 text-sm line-height-3">Ornare suspendisse sed nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</span>
+                            {/* <span className="text-700 text-sm line-height-3">Ornare suspendisse sed nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</span> */}
                         </div>
 
                         <div className="col-12 md:col-4 mb-4 px-5">
@@ -115,7 +135,7 @@ const LandingPage = () => {
                                 <i className="pi pi-globe text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">Fast & Global Support</div>
-                            <span className="text-700 text-sm line-height-3">Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.</span>
+                            {/* <span className="text-700 text-sm line-height-3">Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.</span> */}
                         </div>
 
                         <div className="col-12 md:col-4 mb-4 px-5">
@@ -123,7 +143,7 @@ const LandingPage = () => {
                                 <i className="pi pi-users text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">100% Client Satisfied</div>
-                            <span className="text-700 text-sm line-height-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+                            {/* <span className="text-700 text-sm line-height-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> */}
                         </div>
 
                         <div className="col-12 md:col-4 mb-4 px-5">
@@ -131,7 +151,7 @@ const LandingPage = () => {
                                 <i className="pi pi-lock text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">End-to-End Encryption</div>
-                            <span className="text-700 text-sm line-height-3">Risus nec feugiat in fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</span>
+                            {/* <span className="text-700 text-sm line-height-3">Risus nec feugiat in fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</span> */}
                         </div>
                     
                         
@@ -140,14 +160,14 @@ const LandingPage = () => {
                                 <i className="pi pi-money-bill text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">High Margin</div>
-                            <span className="text-700 text-sm line-height-3">Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. </span>
+                            {/* <span className="text-700 text-sm line-height-3">Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. </span> */}
                         </div>
                         <div className="col-12 md:col-4 md:mb-4 mb-0 px-3">
                             <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
                                 <i className="pi pi-shield text-4xl text-blue-500"></i>
                             </span>
                             <div className="text-900 mb-3 font-medium">Trusted Securitty</div>
-                            <span className="text-700 text-sm line-height-3">Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</span>
+                            {/* <span className="text-700 text-sm line-height-3">Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</span> */}
                         </div>
                     </div>
                 </div>

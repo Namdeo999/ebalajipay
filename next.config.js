@@ -2,10 +2,10 @@
 const nextConfig = {
     reactStrictMode: false,
     trailingSlash: true,
-    basePath: process.env.NODE_ENV === 'production' ? '/ebalajipay' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '' : '',
     publicRuntimeConfig: {
-        contextPath: process.env.NODE_ENV === 'production' ? '/ebalajipay' : '',
-        uploadPath: process.env.NODE_ENV === 'production' ? '/ebalajipay/upload.php' : '/api/upload'
+        contextPath: process.env.NODE_ENV === 'production' ? '' : '',
+        uploadPath: process.env.NODE_ENV === 'production' ? '/upload.php' : '/api/upload'
     }
 };
 
