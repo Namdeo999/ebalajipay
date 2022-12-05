@@ -44,6 +44,16 @@ const RegisterPage = () => {
     const [pinCode, setPinCode] = useState('');
 
     const fetchServices = async () => {
+
+        const ress = await fetch(`https://www.psaonline.utiitsl.com/psaonline/Captcha.jpg`, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        // console.log(ress);
+
         const res = await getServices();
         console.log(res)
         const newData = res.data.map((ele) => {

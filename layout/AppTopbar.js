@@ -4,19 +4,54 @@ import Router, { useRouter } from 'next/router';
 import { classNames } from 'primereact/utils';
 import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
 import { LayoutContext } from './context/layoutcontext';
+import { Menu } from 'primereact/menu';
+import { Button } from 'primereact/button';
 
 const AppTopbar = forwardRef((props, ref) => {
     const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
     const menubuttonRef = useRef(null);
     const topbarmenuRef = useRef(null);
     const topbarmenubuttonRef = useRef(null);
+    const menu = useRef(null);
     const contextPath = getConfig().publicRuntimeConfig.contextPath;
+
 
     useImperativeHandle(ref, () => ({
         menubutton: menubuttonRef.current,
         topbarmenu: topbarmenuRef.current,
         topbarmenubutton: topbarmenubuttonRef.current
     }));
+
+    const overlayMenuItems = [
+        {
+            label: 'Save',
+            icon: 'pi pi-save'
+        },
+        {
+            label: 'Update',
+            icon: 'pi pi-refresh'
+        },
+        {
+            label: 'Delete',
+            icon: 'pi pi-trash'
+        },
+        {
+            separator: true
+        },
+        {
+            label: 'Logout',
+            icon: 'pi pi-fw pi-sign-out',
+            command:()=>{ logout(); }
+        }
+    ];
+
+    const toggleMenu = (event) => {
+        menu.current.toggle(event);
+    };
+
+    const logout = () => {
+        alert('hii');
+    }
 
     return (
         <div className="layout-topbar">
@@ -43,16 +78,17 @@ const AppTopbar = forwardRef((props, ref) => {
                     <i className="pi pi-calendar"></i>
                     <span>Calendar</span>
                 </button>
-                <button type="button" className="p-link layout-topbar-button">
+                <Menu ref={menu} model={overlayMenuItems} popup  />
+                <button type="button" className="p-link layout-topbar-button" onClick={toggleMenu}>
                     <i className="pi pi-user"></i>
                     <span>Profile</span>
                 </button>
-                <Link href="/documentation">
+                {/* <Link href="/documentation">
                     <button type="button" className="p-link layout-topbar-button">
                         <i className="pi pi-cog"></i>
                         <span>Settings</span>
                     </button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );

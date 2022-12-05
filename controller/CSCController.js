@@ -1,6 +1,6 @@
 const getCountry = async () => {
     try {
-        const res = await fetch(`http://206.189.136.20:1700/api/country`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/country`, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ const getCountry = async () => {
 
 const getStateByCountryId = async (country_id) => {
     try {
-        const res = await fetch('http://206.189.136.20:1700/api/get-state-by-country/' + country_id, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/get-state-by-country/` + country_id, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const getStateByCountryId = async (country_id) => {
 
 const getCityByStateId = async (state_id) => {
     try {
-        const res = await fetch('http://206.189.136.20:1700/api/get-city-by-state/' + state_id, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/get-city-by-state/`+ state_id, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

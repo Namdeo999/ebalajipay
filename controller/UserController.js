@@ -1,6 +1,6 @@
 const UserRegistration = async (formData) => {
     try {
-        const res = await fetch(`http://206.189.136.20:1700/api/register`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/register`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ const UserRegistration = async (formData) => {
 
 const UserLogin = async (formData) => {
     try {
-        const res = await fetch(`http://206.189.136.20:1700/api/user-login`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user-login`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'

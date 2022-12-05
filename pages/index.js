@@ -59,12 +59,12 @@ const LandingPage = () => {
                                 </a>
                                 <Ripple />
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="#pricing" className="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                                     <span>Pricing</span>
                                 </a>
                                 <Ripple />
-                            </li>
+                            </li> */}
                         </ul>
                         <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
                             <Button label="Login" className="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500" onClick={() => router.push('/login')}></Button>
@@ -83,17 +83,18 @@ const LandingPage = () => {
                         <h1 className="text-6xl font-bold text-gray-900 line-height-2">
                             <span className="font-light block mb-3">Welcome to...</span>
                             {/* EBalaji Online Pay Services */}
-                            EBalaji Pay Online Services
+                            EBalaji Online PAN Services
                         </h1>
                         <br/>
                         <b>
-                            <p className="font-normal line-height-3 md:mt-3 ">Best B2B Portal Provider Company in India, We at Ebalaji Services provide AEPS, BBPS, DMT, Recharge, Bill Payments, NSDL / UTI Pan Card, Income Tax Return, GST Registration, GST Filling, Shop Act (MH Only), Digital Signature, Food Licence, MSME Certificate…and Much More.</p>
-                            {/* <p className="font-normal line-height-3 md:mt-3 "> PAN card service is most demanding service in the industry, so we have developed software for PAN card service, using PAN card software or application, admin can create PAN card agents in all over india, and enable UTI/NSDL PAN card service for all registered PAN card agents to your business PAN card panel. Vaishnavi Digipayments is one of the best PAN cards service and API solution provider in India, offering PAN card service extremely economical. And all PAN card application can be processed using eKYC..</p> */}
+                            {/* <p className="font-normal line-height-3 md:mt-3 ">Best B2B Portal Provider Company in India, We at Ebalaji Services provide AEPS, BBPS, DMT, Recharge, Bill Payments, NSDL / UTI Pan Card, Income Tax Return, GST Registration, GST Filling, Shop Act (MH Only), Digital Signature, Food Licence, MSME Certificate…and Much More.</p> */}
+                            <p className="font-normal line-height-3 md:mt-3 "> PAN Cards have become more prominent in the recent past, as the government has mandated using PAN Card for most official purposes. With Ebalaji PAN Card API, businesses can now assist their clients to acquire their PAN Card without having to go through the hassle of long queues and confusing documentation.</p>
                         </b>
                         {/* <Button type="button" label="Get Started" className="p-button-rounded text-xl border-none mt-3 bg-blue-500 font-normal line-height-3 px-3 text-white"></Button> */}
                     </div>
                     <div className="flex justify-content-center md:justify-content-end">
-                        <img src={`${contextPath}/assets/images/bharat-bill-payment-system.png`}  alt="Hero Image" className="w-9 md:w-auto" />
+                        {/* <img src={`${contextPath}/assets/images/bharat-bill-payment-system.png`}  alt="Hero Image" className="w-9 md:w-auto" /> */}
+                        <img src={`${contextPath}/assets/images/pan-image.png`}  alt="Hero Image" className="w-9 md:w-auto" />
                     </div>
                 </div>
 
@@ -110,8 +111,19 @@ const LandingPage = () => {
                     </div>
                 </div>
 
+                <div id="aboutus" className=' mt-0 mx-0 '>
+                    <div className="col-12 mt-4 mb-4 p-2 md:p-8" style={{  background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}>
+                        <div className="flex flex-column justify-content-center align-items-center text-center mb-4 px-4 py-4 md:py-0">
+                            <div className="text-900 font-bold text-6xl mb-4 mt-4 text-center">About EbalaJi</div>
+                            <p className="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4" style={{ maxWidth: '1000px' }}>
+                                “In this digital age, where everything in business has gone digital, we at Ebalaji Pay provide an easy, efficient, and long term solution to all your multi utility payment, and other document needs. We abide by the digital India norms in the best possible way. Our main aim is to channelize the payments to the unified digital platforms where you get all the security and convenience. Our services range widely.”
+                            </p>
+                            </div>
+                        </div>
+                </div>
 
-                <div className="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
+
+                <div id="services" className="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
                     <div className="mb-8 font-bold text-2xl">
                         {/* <span className="text-900">Our Best Features, </span> */}
                         <h2 className="text-6xl text-primary font-bold mb-3">Our Best Features</h2>
@@ -119,8 +131,6 @@ const LandingPage = () => {
                     </div>
                     {/* <div className="text-700 text-sm mb-6">OUR FEATURES</div> */}
                     <div className="grid">
-
-                    
 
                         <div className="col-12 md:col-4 mb-4 px-5">
                             <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
@@ -172,29 +182,24 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div id="aboutus" className=' mt-0 mx-0 '>
-                    {/* <div className="col-12 mt-4 mb-4 p-2 md:p-8" style={{ borderRadius: '20px', background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}> */}
+                {/* <div id="aboutus" className=' mt-0 mx-0 '>
                     <div className="col-12 mt-4 mb-4 p-2 md:p-8" style={{  background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EFE1AF 0%, #C3DCFA 100%)' }}>
                         <div className="flex flex-column justify-content-center align-items-center text-center mb-4 px-4 py-4 md:py-0">
-                            {/* <h3 className="text-gray-900 mb-2">About EbalaJi</h3> */}
                             <div className="text-900 font-bold text-6xl mb-4 mt-4 text-center">About EbalaJi</div>
-                            {/* <span className="text-gray-600 text-2xl">Peak Interactive</span> */}
                             <p className="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4" style={{ maxWidth: '1000px' }}>
                                 “In this digital age, where everything in business has gone digital, we at Ebalaji Pay provide an easy, efficient, and long term solution to all your multi utility payment, and other document needs. We abide by the digital India norms in the best possible way. Our main aim is to channelize the payments to the unified digital platforms where you get all the security and convenience. Our services range widely.”
                             </p>
-                            {/* <img src={`${contextPath}/demo/images/landing/peak-logo.svg`} className="mt-4" alt="Company logo" /> */}
                             </div>
                         </div>
-                </div>
+                </div> */}
     
 
-                <div id="services" className="py-4 px-4 lg:px-8 mt- mx-0 lg:mx-8 mb-6">
+                {/* <div id="services" className="py-4 px-4 lg:px-8 mt- mx-0 lg:mx-8 mb-6">
                     <div className="grid justify-content-center">
                         <div className="col-12 text-center mt-7 mb-4">
                         <div className="text-900 font-bold text-6xl mb-4 text-center">We Provide Truly Business Solutions</div>
                     <div className="text-700 text-xl mb-6 text-center line-height-3">Our Best Services</div>
-                            {/* <h2 className="text-900 font-normal mb-2">We Provide Truly Business Solutions</h2>
-                            <span className="text-600 text-2xl">Our Best Services</span> */}
+                            
                         </div>
 
                         <div className="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
@@ -207,9 +212,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-yellow-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-users text-2xl text-yellow-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">AEPS / BBPS / UPI</h5>
                                     <span className="text-600">We are started to providing aadhaar enabled payment system services and providing bharat bill payment or Unique UPI QR Code Accept Payment from your Customer.</span>
                                 </div>
@@ -226,9 +229,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-cyan-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-palette text-2xl text-cyan-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">Bill & Recharge</h5>
                                     <span className="text-600">At Ebalaji you can pay your electricity, landline, insurance, Loan EMI bills with convenience and on time. you can recharge your mobile online.</span>
                                 </div>
@@ -245,9 +246,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">Banking Services</h5>
                                     <span className="text-600">Money transfer has become very important to many people around the world.</span>
                                 </div>
@@ -264,9 +263,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-bluegray-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-id-card text-2xl text-bluegray-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">MSME Certificate</h5>
                                     <span className="text-600">At Ebalaji you can start MSME Certificate center at your shop/office with high margin.</span>
                                 </div>
@@ -283,9 +280,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">Travel & E-Governance Services</h5>
                                     <span className="text-600"> You can start Income Tax Filing and Project File Filing center at your shop/office with high margin.</span>
                                 </div>
@@ -301,9 +296,7 @@ const LandingPage = () => {
                                 }}
                             >
                                 <div className="p-3 surface-card h-full" style={{ borderRadius: '8px' }}>
-                                    {/* <div className="flex align-items-center justify-content-center bg-orange-200 mb-3" style={{ width: '3.5rem', height: '3.5rem', borderRadius: '10px' }}>
-                                        <i className="pi pi-fw pi-star text-2xl text-orange-700"></i>
-                                    </div> */}
+                                    
                                     <h5 className="mb-3 text-900 text-center">Income Tax & GST Registration</h5>
                                     <span className="text-600">You can start  Income Tax Filing, GST Registration and GST Filing Digital Signature center at your shop/office with high margin.</span>
                                 </div>
@@ -311,9 +304,9 @@ const LandingPage = () => {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
 
-                <div id="pricing" className="surface-ground px-4 py-8 md:px-6 lg:px-8">
+              {/* <div id="pricing" className="surface-ground px-4 py-8 md:px-6 lg:px-8">
                     <div className="text-900 font-bold text-6xl mb-4 text-center">Pricing Plans</div>
                     <div className="text-700 text-xl mb-6 text-center line-height-3">Choose the plan according to your need.</div>
 
@@ -322,7 +315,6 @@ const LandingPage = () => {
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">Retailer</div>
-                                    {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
                                         <span className="font-bold text-2xl text-900">100</span>
@@ -365,7 +357,6 @@ const LandingPage = () => {
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 h-full flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">Distributor</div>
-                                    {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
                                         <span className="font-bold text-2xl text-900">501</span>
@@ -409,7 +400,6 @@ const LandingPage = () => {
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">Super Distributor</div>
-                                    {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
                                         <span className="font-bold text-2xl text-900">999</span>
@@ -460,7 +450,6 @@ const LandingPage = () => {
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">White Level</div>
-                                    {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
                                         <span className="font-bold text-2xl text-900">999</span>
@@ -511,7 +500,6 @@ const LandingPage = () => {
                             <div className="p-3 h-full">
                                 <div className="shadow-2 p-3 flex flex-column surface-card" style={{ borderRadius: '6px' }}>
                                     <div className="text-900 font-bold text-xl mb-2">Admin</div>
-                                    {/* <div className="text-600">Plan description</div> */}
                                     <hr className="my-3 mx-0 border-top-1 border-none surface-border" />
                                     <div className="flex align-items-center">
                                         <span className="font-bold text-2xl text-900">9999</span>
@@ -559,7 +547,7 @@ const LandingPage = () => {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
     
 
                 {/* <div  className="py-4 px-4 lg:px-8 my-2 md:my-4">
@@ -664,13 +652,13 @@ const LandingPage = () => {
                     </div>
                 </div> */}
 
-                <div className="py-4 px-4 mx-0 mt-8 lg:mx-8">
+                <div className=" py-4 px-4 mx-0 mt-8 lg:mx-8">
                     <div className="grid justify-content-between">
                         <div className="col-12 md:col-2" style={{ marginTop: '-1.5rem' }}>
                             <Link href="/">
                                 <a className="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
                                     {/* <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="footer sections" width="50" height="50" className="mr-2" /> */}
-                                    <img src={`${contextPath}/assets/logos/ebalaji-sewa-pvt-ltd.jpg`} alt="footer sections" width="200" height="100" className="mr-2" />
+                                    {/* <img src={`${contextPath}/assets/logos/ebalaji-sewa-pvt-ltd.jpg`} alt="footer sections" width="200" height="100" className="mr-2" /> */}
                                     {/* <span className="font-medium text-3xl text-900">EBalaji</span> */}
                                 </a>
                             </Link>
@@ -680,18 +668,26 @@ const LandingPage = () => {
                             <div className="grid text-center md:text-left">
 
                                 <div className="col-12 md:col-6">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Services</h4>
+
+                                <Link href="/">
+                                    <a className="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
+                                        {/* <img src={`${contextPath}/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="footer sections" width="50" height="50" className="mr-2" /> */}
+                                        <img src={`${contextPath}/assets/logos/ebalaji-sewa-pvt-ltd.jpg`} alt="footer sections" width="200" height="100" className="mr-2" />
+                                        {/* <span className="font-medium text-3xl text-900">EBalaji</span> */}
+                                    </a>
+                                </Link>
+                                    {/* <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Services</h4>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Bill Payments</a>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Banking Services</a>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Pan, Aadhar, GST</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Licence</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Licence</a> */}
                                 </div>
 
                                 <div className="col-12 md:col-6 mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Important Links</h4>
+                                    {/* <h4 className="font-medium text-2xl line-height-3 mb-3 text-900">Important Links</h4>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Privacy Policy</a>
                                     <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700">Disclaimer</a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Terms And Conditions</a>
+                                    <a className="line-height-3 text-xl block cursor-pointer text-700">Terms And Conditions</a> */}
                                 </div>
 
                                 

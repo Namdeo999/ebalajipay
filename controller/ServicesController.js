@@ -1,6 +1,6 @@
 const getServices = async () => {
     try {
-        const res = await fetch(`http://206.189.136.20:1700/api/role`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/role`, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

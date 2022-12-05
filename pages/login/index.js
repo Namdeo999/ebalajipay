@@ -21,6 +21,8 @@ const LoginPage = () => {
     const containerClassName = classNames('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden', { 'p-input-filled': layoutConfig.inputStyle === 'filled' });
 
     let handleSubmit = async (e) => {
+
+
         e.preventDefault();
         const formData = {
             mobile: mobile,
@@ -29,7 +31,7 @@ const LoginPage = () => {
         const res = await UserLogin(formData);
         if (res.status === 200) {
             alert('Login successfully');
-            router.push('/');
+            router.push('/dashboard');
         } else {
             alert('Some error occured');
         }
